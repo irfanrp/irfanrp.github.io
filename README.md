@@ -57,11 +57,3 @@ irfanrp.github.io/
 Prefer email or LinkedIn for professional inquiries. See the Contact section on the site.
 
 ---
-
-If you want, I can now:
-
-1. Replace all placeholder project links with sample GitHub URLs or your repos.
-2. Add a `projects/` folder and create one detailed case study page (IaC or GitOps) with diagrams.
-3. Add a small script to automatically list your public GitHub repos on the Projects section (requires a GitHub username).
-
-Pilih opsi yang Anda mau dan saya akan lanjutkan implementasinya.
