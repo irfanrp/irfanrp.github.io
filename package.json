@@ -1,0 +1,47 @@
+{
+  "name": "irfanrp-portfolio",
+  "version": "1.0.0",
+  "description": "Modern and responsive portfolio website for Irfan RP",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server .",
+    "dev": "npx live-server . --port=3000",
+    "build": "echo 'No build process required for static website'",
+    "lint": "npx htmlhint index.html && npx stylelint styles.css && npx eslint script.js",
+    "format": "npx prettier --write *.html *.css *.js",
+    "validate": "npx html-validate index.html"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "modern",
+    "css",
+    "javascript",
+    "html",
+    "frontend",
+    "developer",
+    "ui-ux"
+  ],
+  "author": "Irfan RP",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/irfanrp/irfanrp.github.io.git"
+  },
+  "homepage": "https://irfanrp.github.io",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "html-validate": "^8.5.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
