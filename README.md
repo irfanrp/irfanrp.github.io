@@ -1,116 +1,67 @@
-# Irfan RP - Portfolio Website
+# Irfan RP — DevOps & SRE Portfolio
 
-🚀 **Modern & Responsive Portfolio Website** built with vanilla HTML, CSS, and JavaScript.
+This repository contains my personal DevOps portfolio showcasing infrastructure, automation, and reliability engineering work. The site is a static HTML/CSS/JS site intended to present key projects, skills, and contact information.
 
-## ✨ Features
+## What you'll find here
 
-- **Modern Design**: Clean, minimalist design with smooth animations
-- **Dark/Light Mode**: Toggle between themes with smooth transitions
-- **Responsive**: Fully responsive design that works on all devices
-- **Smooth Animations**: Intersection Observer API for scroll-triggered animations
-- **Interactive Elements**: Hover effects, parallax scrolling, and dynamic content
-- **Contact Form**: Functional contact form with validation
-- **Performance Optimized**: Fast loading with optimized assets
+- A concise DevOps-focused portfolio website (`index.html`) highlighting cloud architecture, CI/CD, IaC, Kubernetes, and observability projects.
+- Reusable static site (no build system required) so you can host on GitHub Pages or any static host.
+- Sample project case studies and links to repos (replace placeholders with your real repos).
 
-## 🛠️ Tech Stack
+## DevOps-Focused Highlights
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern CSS with custom properties, Grid, and Flexbox
-- **JavaScript ES6+**: Vanilla JavaScript with modern features
-- **Font Awesome**: Icons
-- **Google Fonts**: Inter font family
+- Infrastructure as Code (Terraform) modules for provisioning VPC, EKS/managed clusters, and RDS.
+- GitOps workflows using ArgoCD and Kustomize for multi-cluster deployments.
+- CI/CD pipelines implemented with GitHub Actions and Jenkins for secure plan/apply and canary releases.
+- Containerization and orchestration: Docker & Kubernetes (Helm, Operators).
+- Observability: Prometheus, Grafana, Loki and alerting routed to Slack/PagerDuty.
+- Security & Compliance: IAM, secrets management (Vault/Secrets Manager) and automated scanning in pipelines.
 
-## 📱 Sections
+## Quick Start (Preview Locally)
 
-1. **Hero Section**: Introduction with animated profile card
-2. **About**: Personal information and statistics
-3. **Skills**: Technical skills organized by categories
-4. **Projects**: Featured projects with live demos and source code
-5. **Contact**: Contact form and social media links
+Clone the repo and start a simple static server (Python shown here):
 
-## 🎨 Design Features
+```bash
+git clone https://github.com/irfanrp/irfanrp.github.io.git
+cd irfanrp.github.io
+python3 -m http.server 8000
+# open http://localhost:8000 in your browser
+```
 
-- **Gradient Backgrounds**: Beautiful gradient color schemes
-- **Floating Animations**: CSS keyframe animations
-- **Smooth Scrolling**: Enhanced navigation experience
-- **Mobile-First**: Responsive design approach
-- **Accessibility**: ARIA labels and keyboard navigation
+## Make it yours
 
-## 🚀 Quick Start
+1. Replace placeholder project links in `index.html` with real GitHub repo URLs or case studies.
+2. Update contact details in the Contact section.
+3. Add additional project pages or write detailed case studies and link them from the Projects section.
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. That's it! No build process required
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 irfanrp.github.io/
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-└── LICENSE             # License file
+├── index.html          # DevOps-focused portfolio
+├── styles.css          # Styles
+├── script.js           # Interactions and small utilities
+├── README.md           # This file
+├── CHANGELOG.md
+└── LICENSE
 ```
 
-## 🎯 Customization
+## Recommended next steps (optional)
 
-### Updating Personal Information
+- Add a `projects/` folder with detailed case studies and diagrams.
+- Add badges or links to pipelines (e.g., GitHub Actions status) for each showcased repo.
+- Integrate a contact backend (Formspree, Netlify Forms) or link to Calendly for booking.
 
-1. **Contact Details**: Edit the contact section in `index.html`
-2. **Social Links**: Update social media URLs in the contact section
-3. **Projects**: Replace project information with your own work
-4. **Skills**: Modify the skills section to match your expertise
+## Contact
 
-### Styling Customization
-
-The website uses CSS custom properties for easy theming:
-
-```css
-:root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #f093fb;
-    /* ... other variables */
-}
-```
-
-### Adding New Sections
-
-1. Add HTML structure in `index.html`
-2. Add corresponding styles in `styles.css`
-3. Update navigation in the navbar
-
-## 📧 Contact Form
-
-The contact form includes:
-- Client-side validation
-- Success/error notifications
-- Responsive design
-- Accessibility features
-
-> **Note**: To make the form functional, integrate it with a backend service like Formspree, Netlify Forms, or your own server.
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions for improvements, please open an issue.
-
-## 🔗 Live Demo
-
-Visit the live website: [https://irfanrp.github.io](https://irfanrp.github.io)
+Prefer email or LinkedIn for professional inquiries. See the Contact section on the site.
 
 ---
 
-⭐ **Star this repository if it helped you build your portfolio!**
+If you want, I can now:
+
+1. Replace all placeholder project links with sample GitHub URLs or your repos.
+2. Add a `projects/` folder and create one detailed case study page (IaC or GitOps) with diagrams.
+3. Add a small script to automatically list your public GitHub repos on the Projects section (requires a GitHub username).
+
+Pilih opsi yang Anda mau dan saya akan lanjutkan implementasinya.
