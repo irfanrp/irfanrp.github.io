@@ -58,13 +58,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = body.getAttribute('data-theme') === 'dark' 
-            ? 'rgba(26, 32, 44, 0.98)' 
+        navbar.style.background = body.getAttribute('data-theme') === 'dark'
+            ? 'rgba(26, 32, 44, 0.98)'
             : 'rgba(255, 255, 255, 0.98)';
         navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.background = body.getAttribute('data-theme') === 'dark' 
-            ? 'rgba(26, 32, 44, 0.95)' 
+        navbar.style.background = body.getAttribute('data-theme') === 'dark'
+            ? 'rgba(26, 32, 44, 0.95)'
             : 'rgba(255, 255, 255, 0.95)';
         navbar.style.boxShadow = 'none';
     }
@@ -74,13 +74,13 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
             current = sectionId;
         }
@@ -112,7 +112,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll('.skill-category, .project-card, .stat, .contact-info, .contact-form');
-    
+
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -126,25 +126,25 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form data
         const formData = new FormData(contactForm);
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
         const message = formData.get('message');
-        
+
         // Simple validation
         if (!name || !email || !subject || !message) {
             showNotification('Please fill in all fields', 'error');
             return;
         }
-        
+
         if (!isValidEmail(email)) {
             showNotification('Please enter a valid email address', 'error');
             return;
         }
-        
+
         // Simulate form submission
         showNotification('Message sent successfully!', 'success');
         contactForm.reset();
@@ -164,7 +164,7 @@ function showNotification(message, type) {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -174,7 +174,7 @@ function showNotification(message, type) {
             <span>${message}</span>
         </div>
     `;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -190,16 +190,16 @@ function showNotification(message, type) {
         transform: translateX(100%);
         transition: all 0.3s ease;
     `;
-    
+
     // Add to document
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.opacity = '1';
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Remove after 3 seconds
     setTimeout(() => {
         notification.style.opacity = '0';
@@ -215,7 +215,7 @@ document.querySelectorAll('.skill-item').forEach(skill => {
     skill.addEventListener('mouseenter', () => {
         skill.style.transform = 'scale(1.05) rotate(2deg)';
     });
-    
+
     skill.addEventListener('mouseleave', () => {
         skill.style.transform = 'scale(1) rotate(0deg)';
     });
@@ -227,16 +227,16 @@ document.querySelectorAll('.project-card').forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 10;
         const rotateY = (centerX - x) / 10;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
@@ -255,7 +255,7 @@ window.addEventListener('scroll', () => {
 // Counter animation for stats
 function animateCounters() {
     const stats = document.querySelectorAll('.stat h4');
-    
+
     stats.forEach(stat => {
         const target = parseInt(stat.textContent.replace('+', ''));
         let current = 0;
@@ -282,7 +282,7 @@ if (statsSection) {
             }
         });
     }, { threshold: 0.5 });
-    
+
     statsObserver.observe(statsSection);
 }
 
@@ -290,7 +290,7 @@ if (statsSection) {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
-    
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -298,7 +298,7 @@ function typeWriter(element, text, speed = 100) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
@@ -379,3 +379,31 @@ loadingStyle.textContent = `
     }
 `;
 document.head.appendChild(loadingStyle);
+
+// Page Transition Logic
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle link clicks
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+
+            // Check if it's a valid link to another page (not just a hash or external)
+            if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !link.target) {
+                e.preventDefault();
+
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Match CSS transition duration
+            }
+        });
+    });
+
+    // Fade in on bfcache restore (browser back button)
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+        }
+    });
+});
