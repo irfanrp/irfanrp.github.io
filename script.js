@@ -340,11 +340,7 @@ window.addEventListener('load', () => {
 // Add loading styles
 const loadingStyle = document.createElement('style');
 loadingStyle.textContent = `
-    body:not(.loaded) {
-        overflow: hidden;
-    }
-    
-    body:not(.loaded)::before {
+    body::before {
         content: '';
         position: fixed;
         top: 0;
@@ -356,9 +352,18 @@ loadingStyle.textContent = `
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.loaded::before {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
     
-    body:not(.loaded)::after {
+    body::after {
         content: '';
         position: fixed;
         top: 50%;
@@ -371,6 +376,15 @@ loadingStyle.textContent = `
         border-radius: 50%;
         animation: spin 1s linear infinite;
         z-index: 10001;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.loaded::after {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
     
     @keyframes spin {
