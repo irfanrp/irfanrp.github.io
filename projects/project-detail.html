@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study | Irfan RP</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Project Detail Specific Styles */
+        .project-hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            text-align: center;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-item i {
+            color: var(--primary-color);
+        }
+
+        .project-content-section {
+            padding: 4rem 0;
+        }
+
+        .content-block {
+            margin-bottom: 3rem;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .content-block h2 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .content-block h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive image placeholder */
+        .project-banner {
+            width: 100%;
+            height: 400px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" style="text-decoration: none;">
+                    <span>Irfan RP</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#projects" class="nav-link">Back to Projects</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="project-hero">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1 class="hero-title">New Project Title</h1>
+            <p class="hero-subtitle">A brief tagline describing the project impact</p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-code"></i>
+                    <span>DevOps / SRE</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fab fa-github"></i>
+                    <a href="#" class="project-link">View Repo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="project-banner">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+
+            <div class="content-block">
+                <h2>The Challenge</h2>
+                <p>
+                    Describe the problem you were trying to solve here. What were the pain points?
+                    Why was this project necessary? Use this space to demonstrate your understanding
+                    of the problem domain.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>The Solution</h2>
+                <p>
+                    Detail your approach. How did you architect the solution? What tools did you choose and why?
+                    Connect the solution back to the initial problem.
+                </p>
+                <div class="tech-stack-grid">
+                    <div class="tech-item"><i class="fab fa-aws"></i> AWS</div>
+                    <div class="tech-item"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="tech-item"><i class="fas fa-cubes"></i> Kubernetes</div>
+                    <div class="tech-item"><i class="fas fa-code-branch"></i> Terraform</div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Results</h2>
+                <p>
+                    What was the outcome? improved deployment frequency? Reduced downtime?
+                    Automated toil? Use metrics if possible.
+                </p>
+                <ul>
+                    <li>✅ Result 1</li>
+                    <li>✅ Result 2</li>
+                    <li>✅ Result 3</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Irfan RP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
