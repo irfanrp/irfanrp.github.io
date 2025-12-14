@@ -1,0 +1,41 @@
+### macOS ###
+.DS_Store
+
+### Node ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+### Build / Output ###
+dist/
+build/
+coverage/
+
+### Environment / Secrets ###
+.env
+.env.local
+.env.*.local
+
+### Logs (specific) ###
+npm-debug.log
+yarn-debug.log
+
+### Editor / IDE ###
+.vscode/
+*.sublime-workspace
+
+### Misc ###
+thumbs.db
+desktop.ini
+/.cache
+/.parcel-cache
+
+### Jekyll/GitHub Pages ###
+_site/
+.sass-cache
+
+### Optional: OS generated files ###
+Icon\r
