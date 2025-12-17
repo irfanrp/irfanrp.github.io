@@ -1,0 +1,39 @@
+name: Deploy from Gitea to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout GitHub repository
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      # Step 2: Clone Gitea repository
+      - name: Clone Gitea repository
+        run: |
+          git clone https://gitea.com/irfanrp/irfanrp.github.io.git
+          cd irfanrp.github.io
+          git pull origin master 
+
+      # Step 3: Setup Git untuk Deployment
+      - name: Setup Git for Deployment
+        run: |
+          git config user.name "irfanrp"
+          git config user.email "ipratama209@gmail.com"
+
+      - name: Deploy to GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  
+        run: |
+          cp -r irfanrp.github.io/* .
+          git add .
+          git commit -m "Deploy updates to GitHub Pages"
+
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/irfanrp/irfanrp.github.io.git master
