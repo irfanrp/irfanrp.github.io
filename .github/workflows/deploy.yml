@@ -47,8 +47,10 @@ jobs:
           find . -maxdepth 1 ! -name '.git' ! -name '.github' ! -name 'temp_gitea' ! -name '.' ! -name '..' -exec rm -rf {} +
           
           # 3. Move files from temp_gitea to current dir
+          # IMPORTANT: Delete .git from temp_gitea first so we don't overwrite the GitHub repo's .git folder!
+          rm -rf temp_gitea/.git
           cp -a temp_gitea/. .
-          rm -rf temp_gitea .git/modules
+          rm -rf temp_gitea
 
           # 4. Commit and Push
           git add .
