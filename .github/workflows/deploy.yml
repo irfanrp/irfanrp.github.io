@@ -20,8 +20,8 @@ jobs:
 
       - name: Setup Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "irfanrp"
+          git config user.email "ipratama209@gmail.com"
 
       - name: Mirror Content from Gitea
         run: |
