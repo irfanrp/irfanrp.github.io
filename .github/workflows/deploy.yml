@@ -25,8 +25,21 @@ jobs:
 
       - name: Mirror Content from Gitea
         run: |
-          # 1. Clone Gitea repo to a temp folder
-          git clone https://gitea.com/irfanrp/irfanrp.github.io.git temp_gitea
+          # 1. Clone Gitea repo to a temp folder (with retry)
+          n=0
+          until [ "$n" -ge 5 ]
+          do
+             git clone --depth 1 https://gitea.com/irfanrp/irfanrp.github.io.git temp_gitea && break
+             n=$((n+1))
+             echo "Clone failed, retrying in 5 seconds..."
+             sleep 5
+          done
+          
+          # Check if clone succeeded
+          if [ ! -d "temp_gitea" ]; then
+            echo "Failed to clone after 5 attempts"
+            exit 1
+          fi
           
           # 2. Delete everything in CURRENT dir except .git and .github
           find . -maxdepth 1 ! -name '.git' ! -name '.github' ! -name '.' ! -name '..' -exec rm -rf {} +
