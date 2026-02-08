@@ -14,7 +14,6 @@ This repository contains my personal DevOps portfolio showcasing infrastructure,
 - GitOps workflows using ArgoCD and Kustomize for multi-cluster deployments.
 - CI/CD pipelines implemented with GitHub Actions and Jenkins for secure plan/apply and canary releases.
 - Containerization and orchestration: Docker & Kubernetes (Helm, Operators).
-- Automation tooling and services in Go (Golang) and Node.js.
 - Observability: Prometheus, Grafana, Loki and alerting routed to Slack/PagerDuty.
 - Security & Compliance: IAM, secrets management (Vault/Secrets Manager) and automated scanning in pipelines.
 
