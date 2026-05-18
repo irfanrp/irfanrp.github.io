@@ -1,7 +1,3 @@
-# Irfan RP Portfolio
-
-Personal portfolio website for Irfan RP, focused on DevOps, cloud platform engineering, automation, and reliability.
-
 ## Overview
 
 This is a static website built with HTML, CSS, and vanilla JavaScript. It highlights:
