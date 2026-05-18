@@ -1,59 +1,91 @@
-# Irfan RP — DevOps & SRE Portfolio
+# Irfan RP Portfolio
 
-This repository contains my personal DevOps portfolio showcasing infrastructure, automation, and reliability engineering work. The site is a static HTML/CSS/JS site intended to present key projects, skills, and contact information.
+Personal portfolio website for Irfan RP, focused on DevOps, cloud platform engineering, automation, and reliability.
 
-## What you'll find here
+## Overview
 
-- A concise DevOps-focused portfolio website (`index.html`) highlighting cloud architecture, CI/CD, IaC, Kubernetes, and observability projects.
-- Reusable static site (no build system required) so you can host on GitHub Pages or any static host.
-- Sample project case studies and links to repos (replace placeholders with your real repos).
+This is a static website built with HTML, CSS, and vanilla JavaScript. It highlights:
 
-## DevOps-Focused Highlights
+- DevOps-focused profile and experience
+- Skills across cloud, Kubernetes, Terraform, CI/CD, observability, and security
+- Featured DevOps project summaries
+- Contact form integration and social links
 
-- Infrastructure as Code (Terraform) modules for provisioning VPC, EKS/managed clusters, and RDS.
-- GitOps workflows using ArgoCD and Kustomize for multi-cluster deployments.
-- CI/CD pipelines implemented with GitHub Actions and Jenkins for secure plan/apply and canary releases.
-- Containerization and orchestration: Docker & Kubernetes (Helm, Operators).
-- Observability: Prometheus, Grafana, Loki and alerting routed to Slack/PagerDuty.
-- Security & Compliance: IAM, secrets management (Vault/Secrets Manager) and automated scanning in pipelines.
+## Key Features
 
-## Quick Start (Preview Locally)
+- Responsive layout for desktop and mobile
+- Light and dark theme toggle with localStorage persistence
+- Smooth scrolling navigation and active section highlighting
+- Animated cards (skills, projects, stats)
+- Colored DevOps/cloud skill logos
+- Custom DevOps SVG favicon
 
-Clone the repo and start a simple static server (Python shown here):
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Font Awesome icons
+- Devicon CDN assets (selected technology logos)
+
+## Local Development
+
+### 1) Install dependencies
 
 ```bash
-git clone https://github.com/irfanrp/irfanrp.github.io.git
-cd irfanrp.github.io
-python3 -m http.server 8000
-# open http://localhost:8000 in your browser
+npm install
 ```
 
-## Make it yours
+### 2) Run local server
 
-1. Replace placeholder project links in `index.html` with real GitHub repo URLs or case studies.
-2. Update contact details in the Contact section.
-3. Add additional project pages or write detailed case studies and link them from the Projects section.
+```bash
+npm run dev
+```
+
+Default dev URL: http://localhost:3000
+
+You can also run:
+
+```bash
+npm run start
+```
+
+## Available Scripts
+
+- `npm run start` : Start static server with live reload
+- `npm run dev` : Start live server on port 3000
+- `npm run build` : Placeholder (no build step required)
+- `npm run lint` : Run HTMLHint, Stylelint, and ESLint
+- `npm run format` : Format HTML, CSS, and JS with Prettier
+- `npm run validate` : Validate HTML document structure
 
 ## Project Structure
 
-```
-irfanrp.github.io/
-├── index.html          # DevOps-focused portfolio
-├── styles.css          # Styles
-├── script.js           # Interactions and small utilities
-├── README.md           # This file
-├── CHANGELOG.md
+```text
+.
+├── .github/workflows/deploy.yml
+├── favicon-devops.svg
+├── index.html
+├── styles.css
+├── script.js
+├── robots.txt
+├── sitemap.xml
+├── package.json
+├── README.md
 └── LICENSE
 ```
 
-## Recommended next steps (optional)
+## Deployment Notes
 
-- Add a `projects/` folder with detailed case studies and diagrams.
-- Add badges or links to pipelines (e.g., GitHub Actions status) for each showcased repo.
-- Integrate a contact backend (Formspree, Netlify Forms) or link to Calendly for booking.
+- Hosted as a static site (GitHub Pages compatible)
+- Includes GitHub Actions workflow for mirroring updates from Gitea and pushing to this repository
 
-## Contact
+## Customize Content
 
-Prefer email or LinkedIn for professional inquiries. See the Contact section on the site.
+- Update profile text, project items, and contact links in `index.html`
+- Update styling and theme variables in `styles.css`
+- Update interactions and animations in `script.js`
 
----
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.

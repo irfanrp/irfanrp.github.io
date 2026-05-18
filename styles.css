@@ -512,6 +512,38 @@ section {
     margin-bottom: 0.5rem;
 }
 
+/* Brand colors for Cloud & Platform icons */
+.skill-item i.logo-aws {
+    color: #ff9900;
+}
+
+.skill-item i.logo-gcp {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 33%, #fbbc05 66%, #ea4335 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill-item i.logo-cloud {
+    color: #38bdf8;
+}
+
+.skill-item i.logo-linux {
+    color: #22c55e;
+}
+
+.skill-item i.logo-docker {
+    color: #2496ed;
+}
+
+.skill-item:hover i.logo-aws,
+.skill-item:hover i.logo-gcp,
+.skill-item:hover i.logo-cloud,
+.skill-item:hover i.logo-linux,
+.skill-item:hover i.logo-docker {
+    filter: saturate(1.15) brightness(1.05);
+}
+
 .skill-item span {
     font-size: 0.9rem;
     font-weight: 500;
