@@ -593,6 +593,11 @@ section {
     object-fit: contain;
 }
 
+.project-image .devtools-logo {
+    width: 40px !important;
+    height: 40px !important;
+}
+
 .project-content {
     padding: 1.5rem;
 }
