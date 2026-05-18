@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Devtools logo">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="url(#ring)" stroke-width="8"/>
+  <rect x="36" y="49" width="48" height="28" rx="6" fill="#ffffff"/>
+  <path d="M44 63h10M66 63h10" stroke="#6366f1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M60 28v8M60 84v8M28 60h8M84 60h8M39 39l6 6M75 75l6 6M81 39l-6 6M45 75l-6 6" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+</svg>

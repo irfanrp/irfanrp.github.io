@@ -587,6 +587,12 @@ section {
     color: white;
 }
 
+.project-logo {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+}
+
 .project-content {
     padding: 1.5rem;
 }
